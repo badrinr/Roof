@@ -201,7 +201,7 @@ void rcvPointCloudCallBack(const sensor_msgs::PointCloud2 & pointcloud_map)
     pcl::PointCloud<pcl::PointXYZ> cloud_inflation;
     pcl::PointCloud<pcl::PointXYZ> cloud_local;
 
-    ROS_INFO("cloud size before roof = %d", (int)cloud.points.size());
+ //   ROS_INFO("cloud size before roof = %d", (int)cloud.points.size());
     for (xroof = _start_pt(0)-1; xroof<= _start_pt(0)+1; xroof +=0.1)
     {
     	for (yroof = _start_pt(1)-1; yroof<= _start_pt(1)+1; yroof +=0.1)
@@ -214,7 +214,7 @@ void rcvPointCloudCallBack(const sensor_msgs::PointCloud2 & pointcloud_map)
         }
     }
 
-    ROS_INFO("cloud size = %d", (int)cloud.points.size());
+  //  ROS_INFO("cloud size = %d", (int)cloud.points.size());
     for (int idx = 0; idx < (int)cloud.points.size(); idx++)
     {   
         auto mk = cloud.points[idx];
